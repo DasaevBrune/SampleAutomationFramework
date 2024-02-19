@@ -23,7 +23,6 @@ public class CareersPageEvents {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement jobOpportunitiesBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CareersPageElements.viewJobsBtn)));
 
-        // Utilizar JavaScript para hacer clic en el botón
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", jobOpportunitiesBtn);
     }

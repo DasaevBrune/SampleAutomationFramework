@@ -48,6 +48,7 @@ public class BaseTest {
 
         // Navegar a la URL de la aplicación
         driver.get(Constants.url);
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -73,7 +74,6 @@ public class BaseTest {
             logger.log(Status.SKIP, m);
         }
 
-        driver.quit();
 
     }
 
@@ -81,5 +81,6 @@ public class BaseTest {
     public void afterTestMethod() {
         // Finalizar y limpiar el informe de ExtentReports
         extentReports.flush();
+        driver.quit();
     }
 }
