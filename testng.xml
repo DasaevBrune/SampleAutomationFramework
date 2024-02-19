@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <!-- Agregar listeners -->
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+    <!-- Definir las clases de prueba -->
+    <test verbose="2" preserve-order="true" name="UkgSampleAutomationFramework">
+        <classes>
+            <!-- Agregar las clases de prueba que contienen tus pruebas -->
+            <class name="tests.MySampleTest"/>
+        </classes>
+    </test>
+</suite>
